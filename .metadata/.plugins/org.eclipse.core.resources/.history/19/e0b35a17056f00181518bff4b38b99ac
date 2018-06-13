@@ -1,0 +1,8 @@
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		float a =(float10/4;
+		System.out.println(a);
+	}
+}
