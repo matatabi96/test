@@ -3,9 +3,11 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 
-		for (int i=1;i<=5;i++){
-			System.out.println("★");
-		}
+		int i=1;
+		do{
+			System.out.println(i);
+			i+=2;
+		}while(i<10);
 
 	}
 }
