@@ -1,0 +1,7 @@
+package person;
+
+public class Robot {
+
+	public string name = null;
+
+}
