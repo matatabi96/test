@@ -1,7 +1,6 @@
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
-import com.mysql.jdbc.Connection;
 
 /**
  *<p>MySQLに接続する為のユーティリティークラスです。<br>
@@ -27,7 +26,7 @@ public class DBConnector {
 	/**
 	 * データベース接続パスワード
 	 */
-	private static String password = "mysql";
+	private static String password = "";
 
 public Connection getConnection() {
 	Connection con =  null;
