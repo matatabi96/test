@@ -19,6 +19,9 @@ public class LoginAction extends ActionSupport implements SessionAware {
 		LoginDAO dao = new LoginDAO();
 		LoginDTO dto = new LoginDTO();
 
+		System.out.println("画面の値" + name);
+		System.out.println("画面の値" + password);
+
 		dto = dao.select(name,password);
 		if(name.equals(dto.getName())) {
 			if(password.equals(dto.getPassword())){

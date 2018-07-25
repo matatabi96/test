@@ -12,7 +12,7 @@ public class LoginDAO {
 		LoginDTO dto=new LoginDTO();
 		com.internousdev.login.util.DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
-		String sql="select * from user where user_name=? and password=?";
+		String sql="select * from user where user_name=? and user_password=?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -22,7 +22,11 @@ public class LoginDAO {
 
 			if(rs.next()){
 				dto.setName(rs.getString("user_name"));
-				dto.setPassword(rs.getString("password"));
+				dto.setPassword(rs.getString("user_password"));
+
+				System.out.println("DBの値" + dto.getName());
+				System.out.println("DBの値" + dto.getPassword());
+
 			}
 		} catch (SQLException e){
 			e.printStackTrace();

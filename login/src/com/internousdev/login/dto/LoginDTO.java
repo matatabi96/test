@@ -1,6 +1,7 @@
 package com.internousdev.login.dto;
 
 public class LoginDTO {
+
 	private int id;
 	private String name;
 	private String password;
