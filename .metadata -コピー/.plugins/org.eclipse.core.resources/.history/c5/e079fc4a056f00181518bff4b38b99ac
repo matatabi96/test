@@ -1,8 +1,0 @@
-
-public class HelloWorld {
-
-	public static void main(String[] args) {
-		double a =(double)113/3;
-		System.out.println(a);
-	}
-}
