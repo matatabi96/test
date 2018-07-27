@@ -1,5 +1,6 @@
-contextsDir=C:/Users/User/Desktop/pleiades/tomcat/8/conf/Catalina/localhost
+contextsDir=C\:/Users/User/Desktop/pleiades/tomcat/8/conf/Catalina/localhost
 eclipse.preferences.version=1
-tomcatConfigFile=C:/Users/User/Desktop/pleiades/tomcat/8/conf/server.xml
-tomcatDir=C:/Users/User/Desktop/pleiades/tomcat/8
+managerUrl=http\://localhost\:8080/manager
+tomcatConfigFile=C\:/Users/User/Desktop/pleiades/tomcat/8/conf/server.xml
+tomcatDir=C\:/Users/User/Desktop/pleiades/tomcat/8
 tomcatVersion=tomcatV8
