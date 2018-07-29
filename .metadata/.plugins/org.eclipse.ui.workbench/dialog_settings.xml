@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="475" key="DIALOG_X_ORIGIN"/>
-		<item value="96" key="DIALOG_Y_ORIGIN"/>
+		<item value="170" key="DIALOG_X_ORIGIN"/>
+		<item value="38" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="250" key="dialogHeight"/>
-		<item value="350" key="dialogWidth"/>
+		<item value="-1" key="dialogHeight"/>
+		<item value="-1" key="dialogWidth"/>
 		<list key="textEntries">
-			<item value="1"/>
 		</list>
 		<list key="orderedElements">
-			<item value="org.eclipse.datatools.sqltools.sqleditor.perspectives.EditorPerspective"/>
 		</list>
 		<list key="orderedProviders">
-			<item value="org.eclipse.ui.perspectives"/>
 		</list>
 		<list key="textArray">
-			<item value="データベー"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">
@@ -30,8 +26,11 @@
 		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.egit.ui.internal.clone.gitclonecategory"/>
+			<item value="org.eclipse.buildship.ui.importwizards"/>
 			<item value="org.eclipse.m2e"/>
-			<item value="org.eclipse.equinox.p2.category"/>
+			<item value="org.eclipse.team.svn.ui.repository"/>
+			<item value="org.eclipse.team.ui.importWizards"/>
 		</list>
 	</section>
 </section>
