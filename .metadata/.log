@@ -1,4 +1,4 @@
-!SESSION 2018-07-29 18:01:06.803 -----------------------------------------------
+!SESSION 2018-07-31 23:22:03.827 -----------------------------------------------
 eclipse.buildId=4.5.2.M20160212-1500
 java.version=1.8.0_74
 java.vendor=Oracle Corporation
@@ -6,7 +6,7 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
 Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.ui 4 0 2018-07-29 18:03:13.193
+!ENTRY org.eclipse.ui 4 0 2018-07-31 23:22:48.371
 !MESSAGE 未処理のイベント・ループ例外
 !STACK 0
 org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
@@ -44,10 +44,45 @@ Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEdi
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
 	... 23 more
 
-!ENTRY org.eclipse.wst.server.discovery 1 0 2018-07-29 18:06:10.776
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 10 2018-07-31 23:27:59.173
+!MESSAGE Updating the index from remote failed. ; バージョン: 1.100.0.v20160217-0435
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.downloadDatabase(IO.java:171)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerProblemsHistory$UpdateIndexJob.run(ServerProblemsHistory.java:279)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-07-31 23:29:51.242
 !MESSAGE cacheFile=file:/C:/Users/User/Desktop/pleiades/eclipse/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-29 18:06:19.220
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-31 23:29:56.563
 !MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/site.xml への接続に失敗しました。0 の再試行を開始しました
 !STACK 0
 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
@@ -95,7 +130,7 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
 	... 29 more
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-29 18:06:21.438
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-31 23:29:58.053
 !MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
 !STACK 0
 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
@@ -143,222 +178,558 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
 	... 29 more
 
-!ENTRY org.eclipse.wst.server.discovery 1 0 2018-07-29 18:07:23.297
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-07-31 23:30:54.432
 !MESSAGE cacheFile=file:/C:/Users/User/Desktop/pleiades/eclipse/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
 
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 10 2018-07-29 18:08:23.242
-!MESSAGE Updating the index from remote failed. ; バージョン: 1.100.0.v20160217-0435
+!ENTRY org.eclipse.jface 2 0 2018-07-31 23:36:16.988
+!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-07-31 23:36:16.988
+!MESSAGE ALT+CTRL+SPACE の競合が発生しました:
+Binding(ALT+CTRL+SPACE,
+	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
+		,
+		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2ce1d507,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+SPACE,
+	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
+		Open a dialog to search for and insert code snippets,
+		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@518cd198,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-01 01:00:01.935
+!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
 !STACK 0
-java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:170)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
-	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
-	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
-	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
-	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
-	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
-	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.downloadDatabase(IO.java:171)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerProblemsHistory$UpdateIndexJob.run(ServerProblemsHistory.java:279)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.ui 4 4 2018-07-29 18:10:56.135
-!MESSAGE Unable to process element: view in perspective extension: null
-
-!ENTRY org.eclipse.ui 2 2 2018-07-29 18:11:38.937
-!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:13:09.632
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:18:55.987
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY net.sf.eclipse.tomcat 4 4 2018-07-29 18:19:00.795
-!MESSAGE null
-
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:21:04.251
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jface 2 0 2018-07-29 18:21:39.158
-!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-07-29 18:21:39.158
-!MESSAGE ALT+CTRL+SPACE の競合が発生しました:
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
-		,
-		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@41e5038a,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
-		Open a dialog to search for and insert code snippets,
-		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@9470ab3,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:25:00.134
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:25:15.457
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:25:54.052
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:25:57.711
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:28:09.788
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:30:56.675
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:31:36.624
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:31:45.801
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:42:00.243
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:42:13.564
-!MESSAGE \Servers\ローカル・ホスト の Tomcat8 (Java8)-config での Tomcat サーバー構成をロードできませんでした。The サーバー project is closed.
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-29 18:46:03.040
-!MESSAGE ローカル・ホスト の Tomcat8 (Java8) で必要な幾つかのポート (8005, 8080, 8009) がすでに使用中です。サーバーはすでに別のプロセスで稼働中であるか、システム・プロセスがそのポートを使用中である可能性があります。このサーバーを始動するには、他のプロセスを停止するか、ポート番号を変更する必要があります。
-!SESSION 2018-07-29 18:50:29.920 -----------------------------------------------
-eclipse.buildId=4.5.2.M20160212-1500
-java.version=1.8.0_74
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface 2 0 2018-07-29 18:52:52.347
-!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-07-29 18:52:52.347
-!MESSAGE ALT+CTRL+SPACE の競合が発生しました:
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
-		,
-		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2533cbcc,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
-		Open a dialog to search for and insert code snippets,
-		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@73eb57e6,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.ui 4 0 2018-07-29 18:53:03.704
-!MESSAGE 未処理のイベント・ループ例外
-!STACK 0
-org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
-	at org.eclipse.swt.SWT.error(SWT.java:4491)
-	at org.eclipse.swt.SWT.error(SWT.java:4406)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V
-	at org.sf.feeling.decompiler.Startup$SetupClassFileAssociationRunnable.run(Startup.java:81)
-	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:162)
-	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:154)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
 	... 23 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 29 more
 
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 10 2018-07-29 18:58:10.341
-!MESSAGE Updating the index from remote failed. ; バージョン: 1.100.0.v20160217-0435
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2018-08-01 01:00:03.966
+!MESSAGE http://www.pramati.com/downloads/eclipse/updates/content.xml のリポジトリーを読み取ることができません。
 !STACK 0
-java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:170)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
-	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
-	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
-	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
-	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
-	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
-	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.downloadDatabase(IO.java:171)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerProblemsHistory$UpdateIndexJob.run(ServerProblemsHistory.java:279)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 19 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 25 more
 
-!ENTRY org.eclipse.ui 2 2 2018-07-29 19:11:22.901
-!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-08-01 01:01:28.785
+!MESSAGE http://www.apache.org/dist/geronimo/eclipse/updates/ のリポジトリーが見つかりません。
 
-!ENTRY org.eclipse.recommenders.rcp 2 23 2018-07-29 21:06:42.646
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-01 01:03:02.535
+!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 23 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 29 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-01 01:03:05.285
+!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 23 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 29 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-01 01:03:07.879
+!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 23 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 29 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-01 01:03:10.477
+!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 23 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 29 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-01 01:03:16.057
+!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 23 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 29 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-01 01:03:18.635
+!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 23 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 29 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-01 01:03:21.293
+!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 23 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 29 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-01 01:03:23.855
+!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 23 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 29 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-01 01:03:26.496
+!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 23 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 29 more
+
+!ENTRY org.eclipse.recommenders.rcp 2 23 2018-08-01 01:37:32.849
 !MESSAGE Failed to parse news feed
 !STACK 0
 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
@@ -406,1268 +777,3 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
 	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
 	... 30 more
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-30 01:00:24.379
-!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
-	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
-	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
-	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
-	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
-	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 23 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 29 more
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2018-07-30 01:00:27.780
-!MESSAGE http://www.pramati.com/downloads/eclipse/updates/content.xml のリポジトリーを読み取ることができません。
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
-	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
-	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
-	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
-	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
-	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 19 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 25 more
-
-!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-07-30 01:02:00.506
-!MESSAGE http://www.apache.org/dist/geronimo/eclipse/updates/ のリポジトリーが見つかりません。
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-30 01:05:32.965
-!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
-	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
-	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
-	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
-	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
-	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 23 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 29 more
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-30 01:05:37.401
-!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
-	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
-	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
-	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
-	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
-	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 23 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 29 more
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-30 01:05:40.022
-!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
-	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
-	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
-	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
-	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
-	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 23 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 29 more
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-30 01:05:42.629
-!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
-	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
-	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
-	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
-	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
-	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 23 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 29 more
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-30 01:05:48.279
-!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
-	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
-	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
-	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
-	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
-	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 23 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 29 more
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-30 01:05:51.404
-!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
-	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
-	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
-	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
-	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
-	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 23 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 29 more
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-30 01:05:55.329
-!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
-	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
-	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
-	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
-	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
-	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 23 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 29 more
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-30 01:05:57.919
-!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
-	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
-	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
-	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
-	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
-	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 23 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 29 more
-
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-30 01:06:00.690
-!MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
-!STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
-	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
-	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
-	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
-	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
-	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
-	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
-	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
-	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 23 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 29 more
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-07-30 03:10:08.491
-!MESSAGE ローカル・ホスト の Tomcat8 (Java8) で必要な幾つかのポート (8005, 8080, 8009) がすでに使用中です。サーバーはすでに別のプロセスで稼働中であるか、システム・プロセスがそのポートを使用中である可能性があります。このサーバーを始動するには、他のプロセスを停止するか、ポート番号を変更する必要があります。
-
-!ENTRY org.eclipse.wst.server.discovery 1 0 2018-07-30 03:23:18.386
-!MESSAGE cacheFile=file:/C:/Users/User/Desktop/pleiades/eclipse/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
-!SESSION 2018-07-30 03:25:53.950 -----------------------------------------------
-eclipse.buildId=4.5.2.M20160212-1500
-java.version=1.8.0_74
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.ui 4 0 2018-07-30 03:27:16.268
-!MESSAGE 未処理のイベント・ループ例外
-!STACK 0
-org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
-	at org.eclipse.swt.SWT.error(SWT.java:4491)
-	at org.eclipse.swt.SWT.error(SWT.java:4406)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V
-	at org.sf.feeling.decompiler.Startup$SetupClassFileAssociationRunnable.run(Startup.java:81)
-	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:162)
-	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:154)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	... 23 more
-
-!ENTRY org.eclipse.ui 2 2 2018-07-30 05:27:40.989
-!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
-!SESSION 2018-07-30 19:44:57.942 -----------------------------------------------
-eclipse.buildId=4.5.2.M20160212-1500
-java.version=1.8.0_74
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.core.resources 2 10035 2018-07-30 19:45:19.437
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY org.eclipse.jst.jsp.core 4 4 2018-07-30 19:45:51.049
-!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
-
-!ENTRY org.eclipse.ui 4 0 2018-07-30 19:45:54.548
-!MESSAGE 未処理のイベント・ループ例外
-!STACK 0
-org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
-	at org.eclipse.swt.SWT.error(SWT.java:4491)
-	at org.eclipse.swt.SWT.error(SWT.java:4406)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V
-	at org.sf.feeling.decompiler.Startup$SetupClassFileAssociationRunnable.run(Startup.java:81)
-	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:162)
-	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:154)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	... 23 more
-
-!ENTRY org.eclipse.jface 2 0 2018-07-30 19:46:07.210
-!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-07-30 19:46:07.210
-!MESSAGE ALT+CTRL+SPACE の競合が発生しました:
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
-		,
-		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@299003eb,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
-		Open a dialog to search for and insert code snippets,
-		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@173b1683,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.ui 2 2 2018-07-30 19:47:19.526
-!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
-!SESSION 2018-07-30 19:52:43.950 -----------------------------------------------
-eclipse.buildId=4.5.2.M20160212-1500
-java.version=1.8.0_74
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.ui 4 0 2018-07-30 19:53:05.567
-!MESSAGE 未処理のイベント・ループ例外
-!STACK 0
-org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
-	at org.eclipse.swt.SWT.error(SWT.java:4491)
-	at org.eclipse.swt.SWT.error(SWT.java:4406)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V
-	at org.sf.feeling.decompiler.Startup$SetupClassFileAssociationRunnable.run(Startup.java:81)
-	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:162)
-	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:154)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	... 23 more
-
-!ENTRY org.eclipse.ui 2 2 2018-07-30 19:53:40.984
-!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 19:54:37.083
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY org.eclipse.jface 2 0 2018-07-30 19:55:56.671
-!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-07-30 19:55:56.671
-!MESSAGE ALT+CTRL+SPACE の競合が発生しました:
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
-		,
-		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@83b0d9f,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
-		Open a dialog to search for and insert code snippets,
-		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f667f80,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 19:56:21.215
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 19:57:16.016
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 19:59:28.378
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY net.sf.eclipse.tomcat 4 4 2018-07-30 20:01:08.714
-!MESSAGE Tomcat を起動できません。
-Tomcat 設定ページでホーム・ディレクトリーの設定を確認してください。/n
-
-
-!ENTRY net.sf.eclipse.tomcat 4 4 2018-07-30 20:01:08.721
-!MESSAGE org.eclipse.core.runtime.CoreException: 作業ディレクトリー C:/Users/User/Desktop/pleiades/tomcat/8 が存在しません
-	at org.eclipse.jdt.launching.AbstractJavaLaunchConfigurationDelegate.abort(AbstractJavaLaunchConfigurationDelegate.java:93)
-	at org.eclipse.jdt.launching.AbstractJavaLaunchConfigurationDelegate.verifyWorkingDirectory(AbstractJavaLaunchConfigurationDelegate.java:708)
-	at org.eclipse.jdt.launching.JavaLaunchDelegate.launch(JavaLaunchDelegate.java:54)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:731)
-	at net.sf.eclipse.tomcat.VMLauncherUtility.runVM(VMLauncherUtility.java:95)
-	at net.sf.eclipse.tomcat.TomcatBootstrap.runTomcatBootsrap(TomcatBootstrap.java:194)
-	at net.sf.eclipse.tomcat.TomcatBootstrap.start(TomcatBootstrap.java:86)
-	at net.sf.eclipse.tomcat.actions.StartActionDelegate.run(StartActionDelegate.java:38)
-	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:247)
-	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228)
-	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
-	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
-	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-
-!ENTRY org.eclipse.debug.core 4 125 2018-07-30 20:02:07.722
-!MESSAGE デバック・コアからログに記録されたエラー: 
-!STACK 1
-org.eclipse.core.runtime.CoreException: クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1408)
-	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1393)
-	at org.eclipse.jdt.launching.JavaRuntime.resolveRuntimeClasspathEntry(JavaRuntime.java:957)
-	at org.eclipse.jdt.launching.StandardSourcePathProvider.resolveClasspath(StandardSourcePathProvider.java:91)
-	at org.eclipse.jdt.launching.JavaRuntime.resolveSourceLookupPath(JavaRuntime.java:838)
-	at org.eclipse.jst.server.tomcat.core.internal.TomcatSourcePathComputerDelegate$SourcePathComputerVisitor.getSourceContainers(TomcatSourcePathComputerDelegate.java:163)
-	at org.eclipse.jst.server.tomcat.core.internal.TomcatSourcePathComputerDelegate.computeSourceContainers(TomcatSourcePathComputerDelegate.java:58)
-	at org.eclipse.debug.internal.core.sourcelookup.SourcePathComputer.computeSourceContainers(SourcePathComputer.java:71)
-	at org.eclipse.debug.core.sourcelookup.containers.DefaultSourceContainer.createSourceContainers(DefaultSourceContainer.java:117)
-	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.getSourceContainers(CompositeSourceContainer.java:133)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceContainerViewer$ContentProvider.getChildren(SourceContainerViewer.java:83)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1372)
-	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
-	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:906)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
-	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:815)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
-	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
-	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1493)
-	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
-	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1505)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1122)
-	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7633)
-	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5704)
-	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1956)
-	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5256)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4732)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
-	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
-	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2443)
-	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1553)
-	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6501)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4712)
-	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
-	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
-	at org.eclipse.jface.window.Window.open(Window.java:803)
-	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1154)
-	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:619)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
-	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:627)
-	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:560)
-	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:82)
-	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
-	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
-	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
-	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1122)
-	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:788)
-	at org.eclipse.jface.action.ActionContributionItem$9.handleEvent(ActionContributionItem.java:1293)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-!SUBENTRY 1 org.eclipse.jdt.launching 4 150 2018-07-30 20:02:07.722
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-!SESSION 2018-07-30 20:03:01.059 -----------------------------------------------
-eclipse.buildId=4.5.2.M20160212-1500
-java.version=1.8.0_74
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.ui 4 0 2018-07-30 20:03:23.297
-!MESSAGE 未処理のイベント・ループ例外
-!STACK 0
-org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
-	at org.eclipse.swt.SWT.error(SWT.java:4491)
-	at org.eclipse.swt.SWT.error(SWT.java:4406)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
-	at org.eclipse.swt.widgets.Display.msgFilterProc(Display.java:3487)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
-	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4774)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1633)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2117)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
-	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
-	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4774)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1633)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2117)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V
-	at org.sf.feeling.decompiler.Startup$SetupClassFileAssociationRunnable.run(Startup.java:81)
-	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:162)
-	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:154)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	... 42 more
-
-!ENTRY org.eclipse.ui 2 2 2018-07-30 20:03:25.464
-!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
-
-!ENTRY org.eclipse.jface 2 0 2018-07-30 20:06:14.402
-!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-07-30 20:06:14.402
-!MESSAGE ALT+CTRL+SPACE の競合が発生しました:
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
-		,
-		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c47135c,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
-		Open a dialog to search for and insert code snippets,
-		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f44c6b6,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 20:29:42.021
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 20:29:52.266
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 20:29:54.847
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 20:30:12.678
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 20:31:48.976
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 20:32:07.975
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-!SESSION 2018-07-30 20:32:19.922 -----------------------------------------------
-eclipse.buildId=4.5.2.M20160212-1500
-java.version=1.8.0_74
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.ui 4 0 2018-07-30 20:32:42.055
-!MESSAGE 未処理のイベント・ループ例外
-!STACK 0
-org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
-	at org.eclipse.swt.SWT.error(SWT.java:4491)
-	at org.eclipse.swt.SWT.error(SWT.java:4406)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V
-	at org.sf.feeling.decompiler.Startup$SetupClassFileAssociationRunnable.run(Startup.java:81)
-	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:162)
-	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:154)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	... 23 more
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 20:33:24.975
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY org.eclipse.jdt.launching 4 150 2018-07-30 20:33:44.405
-!MESSAGE クラスパスによって参照されているアーカイブ: C:/Users/User/Desktop/pleiades/tomcat/8/bin/bootstrap.jar は存在しません。
-
-!ENTRY org.eclipse.jface 2 0 2018-07-30 20:37:16.852
-!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-07-30 20:37:16.852
-!MESSAGE ALT+CTRL+SPACE の競合が発生しました:
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
-		,
-		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3cfd9459,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(ALT+CTRL+SPACE,
-	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
-		Open a dialog to search for and insert code snippets,
-		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d696b35,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.osgi 2 0 2018-07-30 20:50:01.297
-!MESSAGE クラス "org.eclipse.datatools.sqltools.result.ResultConfiguration" のロード中、スレッド "Thread[main,6,main]" は、スレッド "Thread[Worker-14,5,main]" がバンドル "org.eclipse.datatools.sqltools.result_1.1.6.v201402080246 [219]" の開始を完了するのを待機 (5003ms) していてタイムアウトになりました。デッドロックを回避するために、スレッド "Thread[main,6,main]" が進行中ですが、"org.eclipse.datatools.sqltools.result.ResultConfiguration" は完全に初期化されていない可能性があります。
-!STACK 0
-org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.datatools.sqltools.result"; type="osgi.bundle"; version:Version="1.1.6.v201402080246"; singleton:="true" [id=219] STARTED [STARTED]
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
-	at org.eclipse.osgi.container.Module.start(Module.java:389)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
-	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.datatools.sqltools.result.ui.ResultsViewUIPlugin.start(ResultsViewUIPlugin.java:71)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318)
-	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
-	at org.eclipse.osgi.container.Module.start(Module.java:439)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
-	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
-	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
-	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
-	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
-	at org.eclipse.ui.internal.registry.ViewDescriptor.createView(ViewDescriptor.java:58)
-	at org.eclipse.ui.internal.ViewReference.createPart(ViewReference.java:101)
-	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPart(CompatibilityPart.java:279)
-	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:317)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:898)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:879)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:121)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:345)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:264)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
-	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
-	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
-	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:971)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:640)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:525)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:509)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:69)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:971)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:640)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:746)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:717)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:711)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:695)
-	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1306)
-	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer$1.handleEvent(LazyStackRenderer.java:72)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:186)
-	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
-	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4761)
-	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
-	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
-	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
-	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:85)
-	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
-	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
-	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
-	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:572)
-	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:536)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:724)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:701)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:639)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.activate(PartServiceImpl.java:634)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1157)
-	at org.eclipse.ui.internal.WorkbenchPage.showPart(WorkbenchPage.java:1276)
-	at org.eclipse.ui.internal.WorkbenchPage.busyShowView(WorkbenchPage.java:1267)
-	at org.eclipse.ui.internal.WorkbenchPage$12.run(WorkbenchPage.java:4238)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
-	at org.eclipse.ui.internal.WorkbenchPage.showView(WorkbenchPage.java:4234)
-	at org.eclipse.ui.internal.WorkbenchPage.showView(WorkbenchPage.java:4214)
-	at org.eclipse.datatools.sqltools.internal.sqlscrapbook.actions.ExecuteSQLFileActionDelegate.run(ExecuteSQLFileActionDelegate.java:173)
-	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:247)
-	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
-	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
-	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY org.eclipse.osgi 2 0 2018-07-30 20:50:01.375
-!MESSAGE クラス "org.eclipse.datatools.sqltools.result.ui.ResultsViewUIPlugin$ResultViewControlListener" のロード中、スレッド "Thread[Worker-14,5,main]" は、スレッド "Thread[main,6,main]" がバンドル "org.eclipse.datatools.sqltools.result.ui_1.1.3.v201302061703 [220]" の開始を完了するのを待機 (5002ms) していてタイムアウトになりました。デッドロックを回避するために、スレッド "Thread[Worker-14,5,main]" が進行中ですが、"org.eclipse.datatools.sqltools.result.ui.ResultsViewUIPlugin$ResultViewControlListener" は完全に初期化されていない可能性があります。
-!STACK 0
-org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.datatools.sqltools.result.ui"; type="osgi.bundle"; version:Version="1.1.3.v201302061703"; singleton:="true" [id=220] STARTED [STARTED]
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
-	at org.eclipse.osgi.container.Module.start(Module.java:389)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
-	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
-	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
-	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
-	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
-	at org.eclipse.datatools.sqltools.result.ResultsViewPlugin.addResultListeners(ResultsViewPlugin.java:277)
-	at org.eclipse.datatools.sqltools.result.ResultsViewPlugin.start(ResultsViewPlugin.java:134)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
-	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318)
-	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
-	at org.eclipse.osgi.container.Module.start(Module.java:439)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
-	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.datatools.sqltools.editor.core.result.ResultSupportRunnable.<init>(ResultSupportRunnable.java:76)
-	at org.eclipse.datatools.sqltools.sqleditor.result.SimpleSQLResultRunnable.<init>(SimpleSQLResultRunnable.java:86)
-	at org.eclipse.datatools.sqltools.sqleditor.result.GroupSQLResultRunnable.<init>(GroupSQLResultRunnable.java:106)
-	at org.eclipse.datatools.sqltools.sqleditor.result.GroupSQLResultRunnable.<init>(GroupSQLResultRunnable.java:116)
-	at org.eclipse.datatools.sqltools.internal.sqlscrapbook.actions.MultiGroupExecuteJob.run(MultiGroupExecuteJob.java:86)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.jface.text 2 0 2018-07-30 21:08:17.456
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
-	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:582)
-	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.ui 2 2 2018-07-30 21:18:43.948
-!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
