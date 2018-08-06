@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
-org.eclipse.jdt.core.classpathVariable.TOMCAT_HOME=C\:/Users/User/Desktop/pleiades/tomcat/8
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Users/User/Desktop/pleiades/java/8/jre/lib/rt.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/Users/User/Desktop/pleiades/java/8/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
