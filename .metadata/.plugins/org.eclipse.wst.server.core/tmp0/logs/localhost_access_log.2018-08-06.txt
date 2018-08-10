@@ -1,9 +1,0 @@
-127.0.0.1 - - [06/Aug/2018:21:16:20 +0900] "GET / HTTP/1.1" 404 1019
-0:0:0:0:0:0:0:1 - - [06/Aug/2018:21:16:25 +0900] "GET /WebProj4/ HTTP/1.1" 200 1129
-0:0:0:0:0:0:0:1 - - [06/Aug/2018:21:16:33 +0900] "POST /WebProj4/HelloStrutsAction.action;jsessionid=B8512DA1BD1D477D8E1CEC0233BB2C1E HTTP/1.1" 200 9436
-0:0:0:0:0:0:0:1 - - [06/Aug/2018:21:16:35 +0900] "POST /WebProj4/WelcomeAction.action;jsessionid=B8512DA1BD1D477D8E1CEC0233BB2C1E HTTP/1.1" 404 1059
-0:0:0:0:0:0:0:1 - - [06/Aug/2018:21:16:49 +0900] "POST /WebProj4/InquiryAction.action;jsessionid=B8512DA1BD1D477D8E1CEC0233BB2C1E HTTP/1.1" 200 1062
-0:0:0:0:0:0:0:1 - - [06/Aug/2018:21:16:58 +0900] "POST /WebProj4/InquiryCompleteAction.action HTTP/1.1" 200 17938
-127.0.0.1 - - [06/Aug/2018:21:45:24 +0900] "GET / HTTP/1.1" 404 1019
-0:0:0:0:0:0:0:1 - - [06/Aug/2018:21:45:27 +0900] "GET /WebProj4/ HTTP/1.1" 200 2099
-0:0:0:0:0:0:0:1 - - [06/Aug/2018:21:45:33 +0900] "GET /WebProj4/TestAction.action?username=uuuu&password=iiii HTTP/1.1" 200 17999

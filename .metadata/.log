@@ -1,4 +1,4 @@
-!SESSION 2018-08-06 19:31:22.143 -----------------------------------------------
+!SESSION 2018-08-10 21:01:33.248 -----------------------------------------------
 eclipse.buildId=4.5.2.M20160212-1500
 java.version=1.8.0_74
 java.vendor=Oracle Corporation
@@ -6,7 +6,7 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
 Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.ui 4 0 2018-08-06 19:31:38.839
+!ENTRY org.eclipse.ui 4 0 2018-08-10 21:01:50.190
 !MESSAGE 未処理のイベント・ループ例外
 !STACK 0
 org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
@@ -43,7 +43,7 @@ Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEdi
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
 	... 23 more
-!SESSION 2018-08-06 19:32:13.199 -----------------------------------------------
+!SESSION 2018-08-10 21:02:32.463 -----------------------------------------------
 eclipse.buildId=4.5.2.M20160212-1500
 java.version=1.8.0_74
 java.vendor=Oracle Corporation
@@ -51,7 +51,7 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
 Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.ui 4 0 2018-08-06 19:32:29.151
+!ENTRY org.eclipse.ui 4 0 2018-08-10 21:02:51.545
 !MESSAGE 未処理のイベント・ループ例外
 !STACK 0
 org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
@@ -108,15 +108,68 @@ Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEdi
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
 	... 42 more
 
-!ENTRY org.eclipse.jface 2 0 2018-08-06 19:39:45.902
+!ENTRY org.eclipse.wst.validation 4 0 2018-08-10 21:04:30.615
+!MESSAGE IWAE0027E リソース login の検証構成を取得できませんでした。
+!STACK 0
+java.lang.reflect.InvocationTargetException: IWAE0027E リソース login の検証構成を取得できませんでした。
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:135)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getConfiguration(ConfigurationManager.java:251)
+	at org.eclipse.wst.validation.internal.ValManager.getValidatorsNotCached(ValManager.java:226)
+	at org.eclipse.wst.validation.internal.ValManager.access$1(ValManager.java:220)
+	at org.eclipse.wst.validation.internal.ValManager$ValidatorCache.getValidatorsCached(ValManager.java:1263)
+	at org.eclipse.wst.validation.internal.ValManager.getValidators(ValManager.java:197)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:745)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:176)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.internal.resources.ResourceException: リソース '/login' が開かれていません。
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:143)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:214)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1206)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:126)
+	... 10 more
+Root exception:
+org.eclipse.core.internal.resources.ResourceException: リソース '/login' が開かれていません。
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:143)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:214)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1206)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getProjectConfiguration(ConfigurationManager.java:126)
+	at org.eclipse.wst.validation.internal.ConfigurationManager.getConfiguration(ConfigurationManager.java:251)
+	at org.eclipse.wst.validation.internal.ValManager.getValidatorsNotCached(ValManager.java:226)
+	at org.eclipse.wst.validation.internal.ValManager.access$1(ValManager.java:220)
+	at org.eclipse.wst.validation.internal.ValManager$ValidatorCache.getValidatorsCached(ValManager.java:1263)
+	at org.eclipse.wst.validation.internal.ValManager.getValidators(ValManager.java:197)
+	at org.eclipse.wst.validation.internal.ValManager.accept(ValManager.java:745)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:176)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.validation 4 0 2018-08-10 21:04:30.625
+!MESSAGE リソース '/login' が開かれていません。
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: リソース '/login' が開かれていません。
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:143)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:59)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:51)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.fullBuild(ValBuilderJob.java:216)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:178)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2018-08-10 21:04:30.625
+!MESSAGE リソース '/login' が開かれていません。
+
+!ENTRY org.eclipse.jface 2 0 2018-08-10 21:05:09.988
 !MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
-!SUBENTRY 1 org.eclipse.jface 2 0 2018-08-06 19:39:45.902
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-08-10 21:05:09.988
 !MESSAGE ALT+CTRL+SPACE の競合が発生しました:
 Binding(ALT+CTRL+SPACE,
 	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
 		Open a dialog to search for and insert code snippets,
 		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@529e1192,
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c2bcea8,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
@@ -124,15 +177,18 @@ Binding(ALT+CTRL+SPACE,
 	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
 		,
 		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@71ea9a0d,
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3760f3e8,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
 
-!ENTRY org.eclipse.wst.server.discovery 1 0 2018-08-06 21:15:04.304
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-08-10 21:18:22.878
 !MESSAGE cacheFile=file:/C:/pleiades/eclipse/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-06 21:15:22.679
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-08-10 21:18:22.957
+!MESSAGE cacheFile=file:/C:/pleiades/eclipse/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-10 21:18:30.620
 !MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/site.xml への接続に失敗しました。0 の再試行を開始しました
 !STACK 0
 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
@@ -180,7 +236,7 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
 	... 29 more
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-06 21:15:24.564
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-08-10 21:18:33.204
 !MESSAGE sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target で http://www.pramati.com/downloads/eclipse/updates/p2.index への接続に失敗しました。0 の再試行を開始しました
 !STACK 0
 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
@@ -228,10 +284,75 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
 	... 29 more
 
-!ENTRY org.eclipse.wst.server.discovery 1 0 2018-08-06 21:16:11.222
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-08-10 21:19:18.238
 !MESSAGE cacheFile=file:/C:/pleiades/eclipse/configuration/org.eclipse.wst.server.discovery/serverAdapterSitesDetails.xml
 
-!ENTRY org.eclipse.jface.text 2 0 2018-08-06 21:27:27.070
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2018-08-10 21:28:24.950
+!MESSAGE Full project indexing required:
+  [+] C:\Users\testuser\Desktop\workspace\workspace-okunaga\test\WebProj5\WebContent\WEB-INF\lib\commons-fileupload-1.3.2.jar
+  [+] C:\Users\testuser\Desktop\workspace\workspace-okunaga\test\WebProj5\WebContent\WEB-INF\lib\commons-io-2.2.jar
+  [+] C:\Users\testuser\Desktop\workspace\workspace-okunaga\test\WebProj5\WebContent\WEB-INF\lib\commons-lang3-3.2.jar
+  [+] C:\Users\testuser\Desktop\workspace\workspace-okunaga\test\WebProj5\WebContent\WEB-INF\lib\commons-logging-1.1.3.jar
+  [+] C:\Users\testuser\Desktop\workspace\workspace-okunaga\test\WebProj5\WebContent\WEB-INF\lib\freemarker-2.3.22.jar
+  [+] C:\Users\testuser\Desktop\workspace\workspace-okunaga\test\WebProj5\WebContent\WEB-INF\lib\javassist-3.11.0.GA.jar
+  [+] C:\Users\testuser\Desktop\workspace\workspace-okunaga\test\WebProj5\WebContent\WEB-INF\lib\mysql-connector-java-5.1.46-bin.jar
+  [+] C:\Users\testuser\Desktop\workspace\workspace-okunaga\test\WebProj5\WebContent\WEB-INF\lib\ognl-3.0.21.jar
+  [+] C:\Users\testuser\Desktop\workspace\workspace-okunaga\test\WebProj5\WebContent\WEB-INF\lib\struts2-core-2.3.34.jar
+  [+] C:\Users\testuser\Desktop\workspace\workspace-okunaga\test\WebProj5\WebContent\WEB-INF\lib\xwork-core-2.3.34.jar
+  [+] C:\pleiades\java\8\jre\lib\charsets.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\access-bridge-64.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\cldrdata.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\dnsns.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\jaccess.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\jfxrt.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\localedata.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\nashorn.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\sunec.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\sunjce_provider.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\sunmscapi.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\sunpkcs11.jar
+  [+] C:\pleiades\java\8\jre\lib\ext\zipfs.jar
+  [+] C:\pleiades\java\8\jre\lib\jce.jar
+  [+] C:\pleiades\java\8\jre\lib\jfr.jar
+  [+] C:\pleiades\java\8\jre\lib\jsse.jar
+  [+] C:\pleiades\java\8\jre\lib\resources.jar
+  [+] C:\pleiades\java\8\jre\lib\rt.jar
+  [+] C:\pleiades\tomcat\8\lib\annotations-api.jar
+  [+] C:\pleiades\tomcat\8\lib\catalina-ant.jar
+  [+] C:\pleiades\tomcat\8\lib\catalina-ha.jar
+  [+] C:\pleiades\tomcat\8\lib\catalina-storeconfig.jar
+  [+] C:\pleiades\tomcat\8\lib\catalina-tribes.jar
+  [+] C:\pleiades\tomcat\8\lib\catalina.jar
+  [+] C:\pleiades\tomcat\8\lib\ecj-4.4.2.jar
+  [+] C:\pleiades\tomcat\8\lib\el-api.jar
+  [+] C:\pleiades\tomcat\8\lib\jasper-el.jar
+  [+] C:\pleiades\tomcat\8\lib\jasper.jar
+  [+] C:\pleiades\tomcat\8\lib\jsp-api.jar
+  [+] C:\pleiades\tomcat\8\lib\servlet-api.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-api.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-coyote.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-dbcp.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-i18n-es.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-i18n-fr.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-i18n-ja.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-jdbc.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-jni.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-util-scan.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-util.jar
+  [+] C:\pleiades\tomcat\8\lib\tomcat-websocket.jar
+  [+] C:\pleiades\tomcat\8\lib\websocket-api.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:167)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-08-10 21:31:15.032
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -242,51 +363,13 @@ java.lang.NullPointerException
 	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY org.eclipse.recommenders.rcp 2 23 2018-08-06 21:40:53.944
-!MESSAGE Failed to parse news feed
+!ENTRY org.eclipse.jface.text 2 0 2018-08-10 21:40:49.730
+!MESSAGE 
 !STACK 0
-javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
-	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
-	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
-	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
-	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
-	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
-	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
-	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
-	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:290)
-	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:259)
-	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
-	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.getRSSFeed(CheckForProjectNewsJob.java:138)
-	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.doRun(CheckForProjectNewsJob.java:89)
-	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.run(CheckForProjectNewsJob.java:62)
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:582)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
-	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
-	at sun.security.validator.Validator.validate(Validator.java:260)
-	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
-	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
-	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
-	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
-	... 24 more
-Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
-	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
-	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
-	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
-	... 30 more

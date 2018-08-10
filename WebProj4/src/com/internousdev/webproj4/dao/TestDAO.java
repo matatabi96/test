@@ -39,7 +39,7 @@ public class TestDAO {
 		return ret;
 	}
 
-	public List<LoginDAO> select(String username, String password) {
+	public List<LoginDTO> select(String username, String password) {
 
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();

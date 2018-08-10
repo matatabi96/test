@@ -1,5 +1,0 @@
-127.0.0.1 - - [04/Aug/2018:12:17:51 +0900] "GET / HTTP/1.1" 404 1019
-0:0:0:0:0:0:0:1 - - [04/Aug/2018:12:18:24 +0900] "GET /WebProj2/ HTTP/1.1" 200 2439
-0:0:0:0:0:0:0:1 - - [04/Aug/2018:12:26:27 +0900] "POST /WebProj2/InquiryAction.action;jsessionid=D95CB4A3F6D94018E65BAFE67D369F47 HTTP/1.1" 200 926
-0:0:0:0:0:0:0:1 - - [04/Aug/2018:12:26:27 +0900] "POST /WebProj2/InquiryAction.action;jsessionid=D95CB4A3F6D94018E65BAFE67D369F47 HTTP/1.1" 200 -
-0:0:0:0:0:0:0:1 - - [04/Aug/2018:12:26:39 +0900] "POST /WebProj2/InquiryCompleteAction.action HTTP/1.1" 200 9456
