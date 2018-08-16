@@ -1,5 +1,5 @@
 #DriverManager.Preferences
-#Fri Aug 10 20:06:58 JST 2018
+#Sat Aug 11 11:47:16 JST 2018
 org.eclipse.datatools.enablement.ibm.db2.luw.other.driverTemplate=true
 org.eclipse.datatools.enablement.ibm.db2.luw.kerberosDriverTemplate=true
 org.eclipse.datatools.enablement.ibm.db2.luw.jdbc4.kerberosDriverTemplate=true

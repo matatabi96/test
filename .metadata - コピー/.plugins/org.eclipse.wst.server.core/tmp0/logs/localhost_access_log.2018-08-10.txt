@@ -1,10 +1,3 @@
-127.0.0.1 - - [10/Aug/2018:20:05:11 +0900] "GET / HTTP/1.1" 404 1019
-0:0:0:0:0:0:0:1 - - [10/Aug/2018:20:05:14 +0900] "GET /WebProj4/ HTTP/1.1" 200 2099
-0:0:0:0:0:0:0:1 - - [10/Aug/2018:20:05:21 +0900] "POST /WebProj4/HelloStrutsAction.action HTTP/1.1" 200 9436
-0:0:0:0:0:0:0:1 - - [10/Aug/2018:20:08:00 +0900] "GET /WebProj4/ HTTP/1.1" 200 2099
-0:0:0:0:0:0:0:1 - - [10/Aug/2018:20:08:04 +0900] "POST /WebProj4/HelloStrutsAction.action HTTP/1.1" 200 9436
-0:0:0:0:0:0:0:1 - - [10/Aug/2018:20:10:44 +0900] "GET /WebProj4/hello.jsp HTTP/1.1" 200 294
-127.0.0.1 - - [10/Aug/2018:20:12:17 +0900] "GET / HTTP/1.1" 404 1019
-0:0:0:0:0:0:0:1 - - [10/Aug/2018:20:12:19 +0900] "GET /WebProj4/ HTTP/1.1" 200 2099
-0:0:0:0:0:0:0:1 - - [10/Aug/2018:20:12:20 +0900] "POST /WebProj4/HelloStrutsAction.action HTTP/1.1" 200 608
-0:0:0:0:0:0:0:1 - - [10/Aug/2018:20:12:26 +0900] "GET /WebProj4/TestAction.action?username=oooo&password=iiii HTTP/1.1" 200 339
+127.0.0.1 - - [10/Aug/2018:21:19:25 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [10/Aug/2018:21:19:27 +0900] "GET /WebProj5/ HTTP/1.1" 200 459
+0:0:0:0:0:0:0:1 - - [10/Aug/2018:21:19:30 +0900] "POST /WebProj5/HelloStrutsAction.action;jsessionid=A9FA43AC8BF680DEE5DEFCF9581AF67B HTTP/1.1" 200 619
