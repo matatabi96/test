@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 
 import com.internousdev.template.dto.LoginDTO;
 import com.internousdev.template.util.DBConnector;
-import com.mysql.jdbc.ConnectionFeatureNotAvailableException;
 
 public class LoginDAO {
 	public LoginDTO getLoginUserInfo(String loginUserId, String loginPassword) {
@@ -28,7 +27,14 @@ public class LoginDAO {
 				loginDTO.setLoginId(resultSet.getString("login_id"));
 				loginDTO.setLoginPassword(resultSet.getString("login_pass"));
 				loginDTO.setUserName(resultSet.getString("user_name")); 
+				
+				if(!(resultSet.getString("login_id").equals(null))) {
+					loginDTO.setLoginFlg(true);
+				}
 			}
+		} catch(Exception e) {
+				e.printStackTrace();
 		}
+		return loginDTO;
 	}
 }
