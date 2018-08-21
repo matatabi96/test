@@ -89,13 +89,25 @@ table {
 					</td>
 				</tr>
 				<tr id="box">
+					<td>
+						<label>ユーザー名:</label>
+					</td>
+					<td>
+						<s:property value="userName" escape="false" />
+					</td>
 				</tr>
-
+				<tr>
+					<td>
+						<s:submit value="完了" />
+					</td>
+				</tr>
 				</s:form>
 			</table>
 		</div>
-
 	</div>
-
+	<div id="footer">
+		<div id="pr">
+		</div>
+	</div>
 </body>
 </html>
