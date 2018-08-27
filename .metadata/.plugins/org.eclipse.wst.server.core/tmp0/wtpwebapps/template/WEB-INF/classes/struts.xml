@@ -55,10 +55,10 @@ class="com.internousdev.template.action.BuyItemConfirmAction" method="execute">
 </action>
 
 <!-- MyPageAction -->
-<!--<action name="MyPageAction"
+<action name="MyPageAction"
 class="com.internousdev.template.action.MyPageAction" method="execute">
 <result name="success">myPage.jsp</result>
-</action>-->
+</action>
 
 </package>
 </struts>
