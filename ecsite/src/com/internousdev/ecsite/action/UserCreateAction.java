@@ -1,7 +1,9 @@
 package com.internousdev.ecsite.action;
 
-public class UserCreateAction {
-		public String execute() {
-			return SUCCESS;
-		}
+import com.opensymphony.xwork2.ActionSupport;
+
+public class UserCreateAction extends ActionSupport {
+	public String execute() {
+	return SUCCESS;
+}
 }
