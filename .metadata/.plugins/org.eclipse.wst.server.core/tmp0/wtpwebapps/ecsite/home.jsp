@@ -60,16 +60,17 @@ table {
 display: inline-block;
 text-align: center;
 }
+
 </style>
 
 </head>
 <body>
-	<div id="main">
-		<div id="header">
-			<div id="pr">
-			</div>
+	<div id="header">
+		<div id="pr">
 		</div>
-		<div id="main">
+	</div>
+	<div id="main">
+		<div id="top">
 			<p>Home</p>
 		</div>
 		<div id="text-center">

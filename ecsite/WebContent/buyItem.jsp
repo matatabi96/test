@@ -13,6 +13,7 @@
 <title>BuyItem画面</title>
 <style type="text/css">
 /* ========TAG LAYOUT======== */
+
 body {
 	margin:0;
 	padding:0;
@@ -51,6 +52,7 @@ table {
 	background-color: black;
 	clear:both;
 }
+
 </style>
 </head>
 <body>
