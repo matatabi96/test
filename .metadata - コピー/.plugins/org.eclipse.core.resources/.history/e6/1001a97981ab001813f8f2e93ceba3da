@@ -1,9 +1,0 @@
-package com.internousdev.ecsite.action;
-
-public class UserCreateAction {
-		private static final String SUCCESS = null;
-
-		public String execute() {
-			return SUCCESS;
-		}
-}
