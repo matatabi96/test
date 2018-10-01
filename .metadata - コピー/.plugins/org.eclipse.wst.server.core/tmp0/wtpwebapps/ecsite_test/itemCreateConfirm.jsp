@@ -67,7 +67,7 @@ table {
 		<div>
 			<h3>登録する内容は以下でよろしいですか。</h3>
 		<table>
-		<s:form action="UserCreateCompleteAction">
+		<s:form action="ItemCreateCompleteAction">
 		<tr id="box">
 			<td>
 				<label>商品名:</label>

@@ -77,9 +77,9 @@ text-align: center;
 			<s:form action="HomeAction">
 				<s:submit value="商品購入" />
 			</s:form>
-			<s:form action="">
-				<s:submit value="管理者画面" />
-			</s:form>
+				<p>商品登録は
+					<a href='<s:url action="ItemCreateAction" />'>こちら</a>
+				</p>
 			<s:if test="#session.id!= null">
 				<p>
 					ログアウトする場合は

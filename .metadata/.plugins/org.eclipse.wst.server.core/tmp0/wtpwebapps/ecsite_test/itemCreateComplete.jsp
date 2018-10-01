@@ -65,6 +65,9 @@ table {
 			<div>
 				<a href='<s:url action="HomeAction" />'>ログインへ</a>
 			</div>
+			<div>
+				<a href='<s:url action="ItemCreateAction" />'>商品登録画面へ</a>
+			</div>
 		</div>
 	</div>
 		<div id="footer">

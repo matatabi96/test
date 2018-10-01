@@ -30,7 +30,7 @@ public class TestUserDAO {
 			e.printStackTrace();
 		}
 	}
-}
+
 
 public void selectAll() {
 	DBConnector db = new DBConnector();

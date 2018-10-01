@@ -68,7 +68,7 @@ table {
 		<s:property value="errorMassage" escape="false" />
 		</s:if>
 		<table>
-		<s:form action="UserCreateConfirmAction">
+		<s:form action="ItemCreateConfirmAction">
 		<tr>
 			<td>
 				<label>商品名:</label>

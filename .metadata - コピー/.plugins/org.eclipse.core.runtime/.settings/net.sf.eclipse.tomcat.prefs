@@ -1,5 +1,7 @@
-contextsDir=C:/pleiades/tomcat/8/conf/Catalina/localhost
+contextsDir=C\:/pleiades/tomcat/8/conf/Catalina/localhost
 eclipse.preferences.version=1
-tomcatConfigFile=C:/pleiades/tomcat/8/conf/server.xml
-tomcatDir=C:/pleiades/tomcat/8
+managerUrl=http\://localhost\:8080/manager
+projectsInSourcePath=Android;Capsule;HelloJSP;HelloServlet;Iphone;TestDB;TestDB2;TestDB3;TestProject01;WebProj;WebProj2;WebProj3;WebProj4;WebProj5;ecsite;ecsite_test;listsample;login;person;template;
+tomcatConfigFile=C\:/pleiades/tomcat/8/conf/server.xml
+tomcatDir=C\:/pleiades/tomcat/8
 tomcatVersion=tomcatV8
