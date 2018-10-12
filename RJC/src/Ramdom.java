@@ -1,0 +1,28 @@
+import java.util.Random;
+
+public class Ramdom {
+	public static void main(String[] args){
+		Random random = new Random();
+		//配列を宣言
+        int[] n = new int[10];
+        //double型は小数を扱えるデータ型
+        double sum, average;
+
+        // 乱数配列を作成
+        for(int i = 0; i < n.length; i++) {
+            n[i] = random.nextInt(11);
+            System.out.printf("%d ", n[i]);
+        }
+        System.out.println();
+
+        // 平均値を求める
+        sum = 0;
+        for(int i = 0; i < n.length; i++) {
+            sum += n[i];
+        }
+        average = sum / n.length;
+
+        // 平均値を表示
+        System.out.println(average);
+	}
+}

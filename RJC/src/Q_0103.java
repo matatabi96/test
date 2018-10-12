@@ -1,0 +1,15 @@
+
+public class Q_0103 {
+	public static void main(String[] args){
+		int sum1 = 0;
+		int con =0;
+		for(int i=1; i<=10; i++){
+			if(i%2==0){
+				sum1 +=i;
+				con++;
+			}
+		}
+		System.out.println("偶数の個数は、"+con+"個です。");
+		System.out.println("偶数の合計値は"+sum1+"です。");
+	}
+}
